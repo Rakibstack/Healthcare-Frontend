@@ -1,8 +1,8 @@
-# PH Healthcare — Frontend
+#  Healthcare — Frontend
 
 A production-oriented healthcare platform frontend built with Next.js, TypeScript, and modern React ecosystem tools.
 
-PH Healthcare provides a unified experience for patients, doctors, and administrators to manage healthcare services, appointments, consultations, payments, and doctor workflows through a secure and role-based system.
+ Healthcare provides a unified experience for patients, doctors, and administrators to manage healthcare services, appointments, consultations, payments, and doctor workflows through a secure and role-based system.
 
 The frontend is designed to work with the PH Healthcare backend, which handles authentication, authorization, business rules, payments, appointments, and data consistency.
 
@@ -10,7 +10,7 @@ The frontend is designed to work with the PH Healthcare backend, which handles a
 
 ## Overview
 
-PH Healthcare solves the problem of managing multiple healthcare workflows in a single platform.
+ Healthcare solves the problem of managing multiple healthcare workflows in a single platform.
 
 Patients can discover verified doctors, book available appointment slots, complete payments, and access consultation and prescription-related services.
 
