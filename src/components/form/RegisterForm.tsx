@@ -1,7 +1,7 @@
 "use client";
 
 import { useState } from "react";
-import { Eye, EyeOff, Mail, Lock, UserRound, Loader2 } from "lucide-react";
+import { Eye, EyeOff, Mail, Lock, UserRound, Loader2, Stethoscope, ArrowRight } from "lucide-react";
 import { useRouter } from "next/navigation";
 import { toast } from "sonner";
 import { useForm } from "@tanstack/react-form";
@@ -45,7 +45,9 @@ export default function RegisterForm() {
 
       registerUser(registerData, {
         onSuccess: () => {
-          toast.success("Registration successful Please check your email for verification.");
+          toast.success(
+            "Registration successful Please check your email for verification.",
+          );
 
           const params = new URLSearchParams({ email: registerData.email });
           router.push(`/register/verify-account?${params.toString()}`);
@@ -265,6 +267,33 @@ export default function RegisterForm() {
 
       {/* Google */}
       <GoogleLoginComponent />
+
+      {/* Doctor Application CTA */}
+      <div className="rounded-xl border border-primary/15 bg-primary/[0.04] p-4">
+        <div className="flex items-center gap-3">
+          <div className="flex size-10 shrink-0 items-center justify-center rounded-lg bg-primary/10 text-primary">
+            <Stethoscope className="size-5" />
+          </div>
+
+          <div className="min-w-0 flex-1">
+            <p className="text-sm font-semibold text-foreground">
+              Are you a healthcare professional?
+            </p>
+
+            <p className="mt-1 text-xs leading-5 text-muted-foreground">
+              Join our platform as a verified doctor.
+            </p>
+          </div>
+        </div>
+
+        <Link
+          href="/apply-as-doctor"
+          className="mt-4 flex h-10 w-full items-center justify-center gap-2 rounded-lg border border-primary/20 bg-background text-sm font-semibold text-primary transition-all hover:border-primary hover:bg-primary hover:text-primary-foreground"
+        >
+          Apply as a Doctor
+          <ArrowRight className="size-4" />
+        </Link>
+      </div>
 
       {/* Login */}
       {/* <p className="text-center text-sm text-muted-foreground">
